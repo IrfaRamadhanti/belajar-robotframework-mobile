@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211221 19:54:50.135" rpa="false" schemaversion="2">
+<suite id="s1" name="apiDemosStep" source="F:\Documents\GitHub\belajarRobotFramework-MOBILE\Step\apiDemosStep.robot">
+<test id="s1-t1" name="As s user i want to open API Demos apps">
+<kw name="Start Session" library="apiDemosPage" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=emulator-5554</arg>
+<arg>appPackage=io.appium.android.apis</arg>
+<arg>appActivity=io.appium.android.apis.ApiDemos</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>noReset=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211221 19:54:55.820" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211221 19:54:55.817" endtime="20211221 19:54:55.820"/>
+</kw>
+<msg timestamp="20211221 19:54:55.822" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211221 19:54:55.841" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+</msg>
+<status status="FAIL" starttime="20211221 19:54:50.411" endtime="20211221 19:54:55.841"/>
+</kw>
+<status status="FAIL" starttime="20211221 19:54:50.411" endtime="20211221 19:54:55.842"/>
+</kw>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211221 19:54:55.844" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211221 19:54:55.843" endtime="20211221 19:54:55.844"/>
+</kw>
+<msg timestamp="20211221 19:54:55.847" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211221 19:54:55.848" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211221 19:54:55.843" endtime="20211221 19:54:55.848">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20211221 19:54:50.410" endtime="20211221 19:54:55.848">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+
+
+Also teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" starttime="20211221 19:54:50.137" endtime="20211221 19:54:55.849"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="apiDemosStep">apiDemosStep</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211221 19:54:55.822" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211221 19:54:55.847" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
